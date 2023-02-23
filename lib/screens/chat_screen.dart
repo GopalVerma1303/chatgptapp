@@ -1,4 +1,3 @@
-import 'package:chatgptapp/constants/constants.dart';
 import 'package:chatgptapp/services/assets_manager.dart';
 import 'package:chatgptapp/widgets/MyTextInput.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:chatgptapp/widgets/MyAppBar.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import '../constants/constants.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -45,11 +45,26 @@ class _ChatScreenState extends State<ChatScreen> {
                       hintText: "How can I help you?",
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.send,
-                      color: Colors.grey,
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    color: myInputFieldColor,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.mic,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.send,
+                            color: Colors.grey,
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],

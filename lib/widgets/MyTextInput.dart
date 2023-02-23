@@ -17,7 +17,7 @@ class _MyTextInputState extends State<MyTextInput> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5.0),
+        // borderRadius: BorderRadius.circular(5.0),
         color: myInputFieldColor,
       ),
       child: TextField(
