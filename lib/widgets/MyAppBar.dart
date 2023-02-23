@@ -9,7 +9,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 100.0,
-      backgroundColor: statusBarColor,
+      backgroundColor: statusBarDarkColor,
       elevation: 0.0,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -25,6 +25,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             style: TextStyle(
               color: Colors.white,
               fontSize: 23.0,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],

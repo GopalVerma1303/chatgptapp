@@ -1,4 +1,5 @@
 import 'package:chatgptapp/services/assets_manager.dart';
+import 'package:chatgptapp/widgets/MyChatWidget.dart';
 import 'package:chatgptapp/widgets/MyTextInput.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -28,7 +29,12 @@ class _ChatScreenState extends State<ChatScreen> {
               child: ListView.builder(
                 itemCount: 6,
                 itemBuilder: (context, index) {
-                  return Text("Gopal Verma");
+                  return MyChatWidget(
+                    msg: chatMessages[index]["msg"].toString(),
+                    avatar: chatMessages[index]["avatar"].toString(),
+                    chatIndex:
+                        int.parse(chatMessages[index]["chatIndex"].toString()),
+                  );
                 },
               ),
             ),
