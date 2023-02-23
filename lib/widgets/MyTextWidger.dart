@@ -21,10 +21,8 @@ class MyTextWidget extends StatelessWidget {
               height: 30,
               width: 30,
               decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(5.0),
-                // specify the border radius here
+                borderRadius: BorderRadius.circular(5.0),
                 image: DecorationImage(
-                  // image: NetworkImage(),
                   image: chatIndex == 1
                       ? Image.asset(AssetsManager.logoImage).image
                       : Image.network(avatar).image,

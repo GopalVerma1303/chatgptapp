@@ -1,3 +1,4 @@
+import 'package:avoid_keyboard/avoid_keyboard.dart';
 import 'package:chatgptapp/constants/constants.dart';
 import 'package:chatgptapp/services/assets_manager.dart';
 import 'package:chatgptapp/widgets/MyTextWidger.dart';
@@ -18,7 +19,8 @@ class MyChatWidget extends StatelessWidget {
       required this.chatIndex});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return AvoidKeyboard(
+        child: Column(
       children: [
         MyTextWidget(
           avatar: '$avatar',
@@ -26,6 +28,6 @@ class MyChatWidget extends StatelessWidget {
           chatIndex: chatIndex,
         )
       ],
-    );
+    ));
   }
 }

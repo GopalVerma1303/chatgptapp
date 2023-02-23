@@ -27,7 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
           children: [
             Flexible(
               child: ListView.builder(
-                itemCount: 6,
+                itemCount: chatMessages.length,
                 itemBuilder: (context, index) {
                   return MyChatWidget(
                     msg: chatMessages[index]["msg"].toString(),
