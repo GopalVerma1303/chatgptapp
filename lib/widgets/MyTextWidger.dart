@@ -26,8 +26,8 @@ class MyTextWidget extends StatelessWidget {
                 image: DecorationImage(
                   // image: NetworkImage(),
                   image: chatIndex == 1
-                      ? NetworkImage(avatar)
-                      : AssetImage(AssetsManager.logoImage),
+                      ? Image.asset(AssetsManager.logoImage).image
+                      : Image.network(avatar).image,
                   fit: BoxFit.cover,
                 ),
               ),
